@@ -108,3 +108,4 @@ var drawTemplate = function(centerX, centerY) {
 };
 
 console.log("JS finished.")
+
