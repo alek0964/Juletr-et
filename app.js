@@ -12,11 +12,12 @@ var setup = function(){
     drawGodJul(xMid, yMid + 50);
 
     // examples
-    drawJulekugle(xMid - 150, yMid + 170);
-    drawJulekugle(xMid - -150, yMid + 300);
-    drawJulekugle(xMid - 150, yMid + 300);
-    drawJulekugle(xMid - 0, yMid + 250);
-    drawJulekugle(xMid + 150, yMid + 170);
+    drawJulekugle(xMid - 150, yMid + 170, 255);
+    drawJulekugle(xMid - -150, yMid + 300, 155);
+    drawJulekugle(xMid - 150, yMid + 300, 55);
+    drawJulekugle(xMid - 0, yMid + 250, 255);
+    drawJulekugle(xMid + 150, yMid + 170, 255);
+
     drawDannebrog(xMid + 50, yMid - 200);
     drawDannebrog(xMid + 150, yMid - 200);
     drawDannebrog(xMid + 275, yMid - 200);
@@ -93,11 +94,11 @@ var drawDannebrog = function (centerX, centerY) {
 };
 
 
-var drawJulekugle = function(centerX, centerY) {
+var drawJulekugle = function(centerX, centerY, farve) {
     push();
     fill(255, 0, 255);
     rect(centerX - 11, centerY - 60, 20, 30);
-    fill(255, 201, 0);
+    fill(farve, 201, 0);
     ellipse(centerX, centerY, 75, 75);
     fill(255, 255, 255)
     ellipse(centerX, centerY, 25, 25)
