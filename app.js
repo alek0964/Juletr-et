@@ -7,7 +7,7 @@ var setup = function(){
     var xMid = width / 2;
     var yMid = height / 2;
     createCanvas(width, height);
-    drawBackground();
+    drawBackground(width, height);
     drawTree(xMid, yMid + 50);
     drawGodJul(xMid, yMid + 50);
 
@@ -62,8 +62,13 @@ var drawLevel = function(centerX, centerY, level) {
 /**
  * Should draw a background the tree
  */
-function drawBackground() {
-    
+var drawBackground = function (varX, varY) {
+    push();
+    var height = 1;
+    var width = 1;
+    rect(0, 0,varX,varY);
+    fill(0, 0, 150);
+    pop();
 };
 
 var drawGodJul = function (centerX, centerY) {
