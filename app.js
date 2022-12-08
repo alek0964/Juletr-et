@@ -60,7 +60,7 @@ function drawBackground() {
 var drawGodJul = function (centerX, centerY) {
     push();
     textSize(45);
-    fill(255, 0, 0)
+    fill(255, 255, 0)
     text("God Jul VG", centerX - 110, centerY);
     pop();
 };
