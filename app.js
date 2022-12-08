@@ -13,7 +13,16 @@ var setup = function(){
 
     // examples
     drawJulekugle(xMid - 150, yMid + 170);
-    drawDannebrog(xMid + 100, yMid - 100);
+    drawJulekugle(xMid - -150, yMid + 300);
+    drawJulekugle(xMid - 150, yMid + 300);
+    drawJulekugle(xMid - 0, yMid + 250);
+    drawJulekugle(xMid + 150, yMid + 170);
+    drawDannebrog(xMid + 50, yMid - 200);
+    drawDannebrog(xMid + 150, yMid - 200);
+    drawDannebrog(xMid + 275, yMid - 200);
+    drawDannebrog(xMid - 50, yMid - 200);
+    drawDannebrog(xMid - 150, yMid - 200);
+    drawDannebrog(xMid - 275, yMid - 200);
 
     // call you own functions here
     drawTemplate(260, 780);
@@ -78,9 +87,10 @@ var drawDannebrog = function (centerX, centerY) {
     pop();
 };
 
+
 var drawJulekugle = function(centerX, centerY) {
     push();
-    fill(174, 0, 255);
+    fill(255, 0, 255);
     rect(centerX - 11, centerY - 60, 20, 30);
     fill(255, 201, 0);
     ellipse(centerX, centerY, 75, 75);
