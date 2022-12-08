@@ -12,11 +12,11 @@ var setup = function(){
     drawGodJul(xMid, yMid + 50);
 
     // examples
-    drawJulekugle(xMid - 150, yMid + 170, 255);
-    drawJulekugle(xMid - -150, yMid + 300, 155);
-    drawJulekugle(xMid - 150, yMid + 300, 55);
-    drawJulekugle(xMid - 0, yMid + 250, 255);
-    drawJulekugle(xMid + 150, yMid + 170, 255);
+    drawJulekugle(xMid - 150, yMid + 170, 255, 132, 12, 200);
+    drawJulekugle(xMid - -150, yMid + 300, 155, 11, 42, 200);
+    drawJulekugle(xMid - 150, yMid + 300, 250, 42, 0, 200);
+    drawJulekugle(xMid - 0, yMid + 250, 11, 250, 0, 200);
+    drawJulekugle(xMid + 150, yMid + 170, 0, 0, 255, 200);
 
     drawDannebrog(xMid + 50, yMid - 200);
     drawDannebrog(xMid + 150, yMid - 200);
@@ -39,7 +39,7 @@ var drawTree = function (centerX, centerY) {
 
     // leaves
     var counter = 0;
-    while (counter < 3){
+    while (counter < 5){
         drawLevel(centerX, centerY, counter);
         counter++;
     } 
@@ -67,8 +67,8 @@ var drawBackground = function (varX, varY) {
     push();
     var height = 1;
     var width = 1;
+    fill(204, 102, 0);
     rect(0, 0,varX,varY);
-    fill(0, 0, 150);
     pop();
 };
 
@@ -94,11 +94,11 @@ var drawDannebrog = function (centerX, centerY) {
 };
 
 
-var drawJulekugle = function(centerX, centerY, farve) {
+var drawJulekugle = function(centerX, centerY, farve1, farve2, farve3, opacitet) {
     push();
     fill(255, 0, 255);
     rect(centerX - 11, centerY - 60, 20, 30);
-    fill(farve, 201, 0);
+    fill(farve1, farve2, farve3, opacitet);
     ellipse(centerX, centerY, 75, 75);
     fill(255, 255, 255)
     ellipse(centerX, centerY, 25, 25)
